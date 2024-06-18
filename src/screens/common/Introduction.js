@@ -76,8 +76,8 @@ const Introduction = ({ navigation }) => {
 
             if (imageIndex == descriptionImages?.length - 1) {
                 storeData();
-                // navigation.navigate('SelectUser');
-                navigation.navigate('OtpLogin',{ needsApproval: manualApproval.includes(userList?.[0].user_type),userType:userList?.[0]?.user_type,userId:userList?.[0]?.user_type_id, registrationRequired:registrationRequired}) 
+                navigation.navigate('SelectUser');
+                // navigation.navigate('OtpLogin',{ needsApproval: manualApproval.includes(userList?.[0].user_type),userType:userList?.[0]?.user_type,userId:userList?.[0]?.user_type_id, registrationRequired:registrationRequired}) 
             }
             else {
                 setImageIndex(imageIndex + 1)
