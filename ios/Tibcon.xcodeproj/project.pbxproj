@@ -643,7 +643,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tibcon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saasinjune;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tibcon.app/Tibcon";
 			};
@@ -669,7 +669,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tibcon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saasinjune;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tibcon.app/Tibcon";
 			};
@@ -704,7 +704,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tibcon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saasinjune;
 				PRODUCT_NAME = "Tibcon";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tibcon-Bridging-Header.h";
@@ -743,7 +743,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tibcon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saasinjune;
 				PRODUCT_NAME = "Tibcon";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tibcon-Bridging-Header.h";

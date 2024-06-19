@@ -75,9 +75,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.Tibcon"
+    namespace "com.saasinjune"
     defaultConfig {
-        applicationId "com.Tibcon"
+        applicationId "com.saasinjune"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 2

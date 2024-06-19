@@ -44,6 +44,7 @@ import SpInAppUpdates, {
 } from 'sp-react-native-in-app-updates';
 import { useInternetSpeedContext } from '../../Contexts/useInternetSpeedContext';
 import { setSlowNetwork } from '../../../redux/slices/internetSlice';
+import { user_type_option } from '../../utils/usertTypeOption';
 
 
 const Splash = ({ navigation }) => {
@@ -592,7 +593,7 @@ const Splash = ({ navigation }) => {
         if (!getMinVersionSupportData?.body?.data) {
           Alert.alert('Kindly update the app to the latest version', 'Your version of app is not supported anymore, kindly update', [
             
-            {text: 'Update', onPress: () => Linking.openURL("https://play.google.com/store/apps/details?id=com.Tibcon")},
+            {text: 'Update', onPress: () => Linking.openURL("https://play.google.com/store/apps/details?id=com.saasinjune")},
           ]);
         }
       }
@@ -601,7 +602,7 @@ const Splash = ({ navigation }) => {
         {
           Alert.alert('Kindly update the app to the latest version', 'Your version of app is not supported anymore, kindly update', [
             
-            {text: 'Update', onPress: () => Linking.openURL("https://play.google.com/store/apps/details?id=com.Tibcon")},
+            {text: 'Update', onPress: () => Linking.openURL("https://play.google.com/store/apps/details?id=com.saasinjune")},
           ]);
         }
       }
@@ -673,7 +674,12 @@ const Splash = ({ navigation }) => {
       if (value === "Yes") 
       {   
        __DEV__ && setLocationCheckVisited(true)
-       minVersionSupport   && locationStatusChecked && navigation.navigate('OtpLogin',{ needsApproval: manualApproval.includes(userList?.[0].user_type),userType:userList?.[0]?.user_type,userId:userList?.[0]?.user_type_id, registrationRequired:registrationRequired}) 
+       if(user_type_option == "single"){
+        minVersionSupport   && locationStatusChecked && navigation.navigate('OtpLogin',{ needsApproval: manualApproval.includes(userList?.[0].user_type),userType:userList?.[0]?.user_type,userId:userList?.[0]?.user_type_id, registrationRequired:registrationRequired}) 
+       }
+       else{
+        minVersionSupport   && locationStatusChecked && navigation.navigate('SelectUser')
+       }
       }
       else 
       {

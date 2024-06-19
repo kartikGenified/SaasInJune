@@ -4,6 +4,7 @@ import DotHorizontalList from '../../components/molecules/DotHorizontalList';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useGetAppUsersDataMutation } from '../../apiServices/appUsers/AppUsersApi';
 import { useSelector } from 'react-redux';
+import { user_type_option } from '../../utils/usertTypeOption';
 
 
 
@@ -90,8 +91,11 @@ const Introduction = ({ navigation }) => {
     const handleSkip = () => {
         // navigation.navigate('SelectLanguage')
         storeData();
+        if(user_type_option == "single"){
+            navigation.navigate('OtpLogin',{ needsApproval: manualApproval.includes(userList?.[0].user_type),userType:userList?.[0]?.user_type,userId:userList?.[0]?.user_type_id, registrationRequired:registrationRequired}) 
+        }
+        else{   navigation.navigate('SelectUser') }
         // navigation.navigate('SelectUser')
-        navigation.navigate('OtpLogin',{ needsApproval: manualApproval.includes(userList?.[0].user_type),userType:userList?.[0]?.user_type,userId:userList?.[0]?.user_type_id, registrationRequired:registrationRequired}) 
 
     }
 
